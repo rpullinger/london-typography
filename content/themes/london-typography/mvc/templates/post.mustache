@@ -1,12 +1,51 @@
-<h1>Post</h1>
-{{#post}}
-	{{{title}}}
-    {{time}}
-    {{{content}}}
-                
-    {{#next_post_link}}{{{next_post_link}}}{{/next_post_link}}
-	{{#previous_post_link}}{{{previous_post_link}}}{{/previous_post_link}}
-                
+<div class="site-content">
+        <div class="l-container">
+       		{{#post}}
+            <div class="single-photo">
+               
+               <div class="photo">
+                    <h3 class="photo-title">{{{title}}}</h3>
+                    <div>{{{content}}}</div>
+               </div>
 
-{{/post}}
+               <div class="photo-meta-container">
+                    <ul class="photo-meta">
+                        <li>
+                            <h2 class="photo-meta-title"><i class="icon-calendar"></i> Posted on</h2>
+                            <p>{{time}}<br/></p>
+                        </li>
+                        <li>
+                            <h2 class="photo-meta-title"><i class="icon-user"></i> Submitted by</h2>
+                            <p>{{author}}</p>
+                        </li>
+                        <li>
+                            <h2 class="photo-meta-title"><i class="icon-tag"></i> Tags</h2>
+                            <p>graffiti, sign, bold</p>
+                        </li>
+                    </ul>
+               </div>
 
+            </div> 
+       
+        </div>
+        
+        <iframe class="map-box" width='100%' height='200' frameBorder='0' src='http://a.tiles.mapbox.com/v3/rpullinger.map-4w6m0sb5.html#14/51.503299999999996/-0.1293000000000227'></iframe>
+        <div class="l-container">
+       
+            <div class="single-photo">
+
+               <div class="photo-nav">
+                   <nav class="split">
+                       <p class="next"><a href="#">Next <i class="icon-arrow-right"></i></a></p>
+                       <p class="previous"><a href="#" ><i class="icon-arrow-left"></i> Previous</a></p>
+                   </nav>
+               </div>
+            </div> 
+
+            {{#next_post_link}}{{{next_post_link}}}{{/next_post_link}}
+			{{#previous_post_link}}{{{previous_post_link}}}{{/previous_post_link}}
+       
+        </div>
+        {{/post}}
+        
+    </div>
