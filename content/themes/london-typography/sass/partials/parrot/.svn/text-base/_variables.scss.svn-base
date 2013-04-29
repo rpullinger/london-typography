@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+
+/**
+ * The following variables are used within the reset to set up the base styles
+ * for the site.
+ */
+
+/*------------------------------------*\
+    Responsive Breakpoints
+\*------------------------------------*/
+
+$max-width:                 1150px;
+
+/*
+These are the major breakpoints for the site
+ */
+$s-start:                   400px;
+$m-start:                   600px;
+$l-start:                   800px;
+$xl-start:                  1000px;
+
+
+/*------------------------------------*\
+    Sizes, Fonts and units
+\*------------------------------------*/
+
+/*
+The base unit
+ */
+$base-unit:                 20px;
+
+/*
+Font sizes
+ */
+$base-font-size:            16px;
+
+$h1-size:                   30px;
+$h2-size:                   22px;
+$h3-size:                   20px;
+$h4-size:                   18px;
+$h5-size:                   16px;
+$h6-size:                   16px;
+
+$small-size:                12px;
+
+/*
+Line Heights
+ */
+$base-line-height:          1.5;
+$headline-line-height:      1.2;
+
+/*
+Font Stacks
+ */
+$font-body:                 "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-headline:             "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+
+
+/*------------------------------------*\
+    Colors
+\*------------------------------------*/
+
+$color-body-background:     #fff;
+$color-primary:             #007;
+$color-secondary:           #060;
+
+
+
+
+/*------------------------------------*\
+    Site Specific
+\*------------------------------------*/

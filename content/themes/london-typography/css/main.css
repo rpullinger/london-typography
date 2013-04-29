@@ -1,0 +1,2279 @@
+/*------------------------------------*\
+    {{ Site Name }}
+    {{ Developer }}
+    {{ Date }}
+\*------------------------------------*/
+/*
+Starter Stuff
+ */
+/*------------------------------------*\
+    Variables
+\*------------------------------------*/
+/**
+ * The following variables are used within the reset to set up the base styles
+ * for the site.
+ */
+/*------------------------------------*\
+    Responsive Breakpoints
+\*------------------------------------*/
+/*
+These are the major breakpoints for the site
+ */
+/*------------------------------------*\
+    Sizes, Fonts and units
+\*------------------------------------*/
+/*
+The base unit
+ */
+/*
+Font sizes
+ */
+/*
+Line Heights
+ */
+/*
+Font Stacks
+ */
+/*------------------------------------*\
+    Colors
+\*------------------------------------*/
+/*------------------------------------*\
+    Site Specific
+\*------------------------------------*/
+/*------------------------------------*\
+    Common mixins & placeholders for
+    doing stuff
+\*------------------------------------*/
+/*
+Super simple Mixin for the responsive stuff
+ */
+/*
+Target retina
+ */
+/*
+Clearfix
+ */
+/*
+Old Style centering
+ */
+.l-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+Accessibility - hide the text - As HTML5 BP - https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+ */
+/*
+Smooth the changes
+ */
+a {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/*
+Proceed - to show progression
+ */
+/*
+Full bleed - pull items to parent sides
+ */
+/*------------------------------------*\
+    Navigation Helpers
+\*------------------------------------*/
+/*
+Navigation abstraction - http://csswizardry.com/2011/09/the-nav-abstraction/
+ */
+.nav, .form-list ul, .main-navigation, .sub-nav {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.nav > li, .form-list ul > li, .main-navigation > li, .sub-nav > li,
+.nav > li > a,
+.form-list ul > li > a,
+.main-navigation > li > a,
+.sub-nav > li > a {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  *display: inline;
+  zoom: 1;
+}
+.nav ul, .form-list ul ul, .main-navigation ul, .sub-nav ul {
+  padding-left: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.nav > li:hover ul, .form-list ul > li:hover ul, .main-navigation > li:hover ul, .sub-nav > li:hover ul {
+  display: block;
+}
+
+/*
+Stacked Navigation
+ */
+.nav-stacked > li, .nav ul > li, .form-list ul ul > li, .main-navigation ul > li, .sub-nav ul > li, .form-list ul > li, .sub-nav > li,
+.nav-stacked > li > a,
+.nav ul > li > a,
+.form-list ul ul > li > a,
+.main-navigation ul > li > a,
+.sub-nav ul > li > a,
+.form-list ul > li > a,
+.sub-nav > li > a {
+  display: block;
+}
+
+/*
+Centered Navigation
+ */
+.nav-centered {
+  text-align: center;
+}
+.nav-centered > li {
+  text-align: left;
+}
+
+/*
+Transparent BGs with fallback for ie8 support
+ */
+/*------------------------------------*\
+    Image helpers
+\*------------------------------------*/
+/*
+Retina background images
+ */
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+/**
+ * This is the base starting point for all the regular html elements
+ */
+/*
+Border box everything! http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+Shared vertical rhythm - csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, .footer-title, .main-navigation a, .split .next a,
+.split .previous a, .photo-title, .photo-meta-title, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+h1:last-child, h1.last, h2:last-child, h2.last, h3:last-child, h3.last, h4:last-child, h4.last, h5:last-child, .footer-title:last-child, .main-navigation a:last-child, .split .next a:last-child,
+.split .previous a:last-child, .photo-title:last-child, .photo-meta-title:last-child, h5.last, .last.footer-title, .main-navigation a.last, .split .next a.last,
+.split .previous a.last, .last.photo-title, .last.photo-meta-title, h6:last-child, h6.last, hgroup:last-child, hgroup.last,
+ul:last-child,
+ul.last, ol:last-child, ol.last, dl:last-child, dl.last,
+blockquote:last-child,
+blockquote.last, p:last-child, p.last, address:last-child, address.last,
+table:last-child,
+table.last,
+fieldset:last-child,
+fieldset.last, figure:last-child, figure.last,
+pre:last-child,
+pre.last {
+  margin-bottom: 0;
+}
+
+ul,
+ol,
+dl {
+  padding-left: 20px;
+}
+
+/*
+Fonts and Headings
+ */
+html {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Open Sans", Georgia, serif;
+  background-color: #cccccc;
+  color: #383838;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.footer-title,
+.main-navigation a,
+.split .next a,
+.split .previous a,
+.photo-title,
+.photo-meta-title,
+h6 {
+  font-family: "Open Sans" "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5, .footer-title, .main-navigation a, .split .next a,
+.split .previous a, .photo-title, .photo-meta-title {
+  font-size: 13px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+small,
+.form-error,
+.form-terms,
+.form-extra-info {
+  font-size: 12px;
+}
+
+/*
+Simple anchor links - sets up simple hover etc and colors
+ */
+a {
+  text-decoration: none;
+  color: #383838;
+}
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+/*
+Make images responsive by default
+ */
+img {
+  max-width: 100%;
+}
+
+/*
+Use i for icons
+ */
+i {
+  font-style: normal;
+  vertical-align: middle;
+}
+
+/*
+Get forms elements to follow our font styling
+ */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+/*------------------------------------*\
+    Grids and containers
+\*------------------------------------*/
+/*
+Fixed width container
+ */
+.l-container {
+  padding: 20px;
+  max-width: 1150px;
+}
+
+/*
+Make something full size of parent
+ */
+.l-fullscreen {
+  width: 100%;
+  min-height: 100%;
+  background-color: #383838;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.l-vertically-center-children {
+  font-size: 0;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+}
+.l-vertically-center-children:before {
+  content: '';
+  height: 100%;
+  width: 0;
+  margin-top: 0px;
+}
+.l-vertically-center-children:before,
+.l-vertically-center-children > * {
+  font-size: 12px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+.l-vertically-center-children > * {
+  max-width: 1150px;
+}
+
+/**
+ * A simple responsive grid system
+ *
+ * Adapted from https://github.com/csswizardry/csswizardry-grids
+ *
+<div class="l-grid">
+    <div class="l-grid-item l-small-one-half l-medium-two-thirds">
+        <div class="l-test">
+
+            <div class="l-grid">
+                <div class="l-grid-item l-medium-one-half l-large-two-thirds">
+                    <div class="l-test"></div>
+                </div>
+                <div class="l-grid-item l-medium-one-half l-large-one-third">
+                    <div class="l-test"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="l-grid-item l-small-one-half l-medium-one-third">
+        <div class="l-test"></div>
+    </div>
+</div>
+ */
+.l-grid, .form-field,
+.form-heading,
+.form-submit, .split, .single-photo, .photo-meta, .site-footer-sections {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -20px;
+  font-size: 0;
+}
+.l-grid.l-reversed, .l-reversed.form-field, .form-field.split,
+.l-reversed.form-heading,
+.form-heading.split,
+.l-reversed.form-submit,
+.form-submit.split, .split, .l-reversed.single-photo, .single-photo.split, .l-reversed.photo-meta, .photo-meta.split, .l-reversed.site-footer-sections, .site-footer-sections.split {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+.l-grid.l-centered, .l-centered.form-field,
+.l-centered.form-heading,
+.l-centered.form-submit, .l-centered.split, .l-centered.single-photo, .l-centered.photo-meta, .l-centered.site-footer-sections {
+  text-align: center;
+}
+.l-grid.l-snug, .l-snug.form-field,
+.l-snug.form-heading,
+.l-snug.form-submit, .l-snug.split, .l-snug.single-photo, .l-snug.photo-meta, .l-snug.site-footer-sections {
+  margin-left: 0;
+}
+
+.l-grid-item, .form-label,
+.form-input,
+.form-heading > *,
+.form-submit-button, .split .next,
+.split .previous, .photo, .photo-meta-container, .photo-meta > li, .photo-nav, .site-footer-about,
+.site-footer-sublinks,
+.site-footer-contact {
+  display: inline-block;
+  *display: inline;
+  padding-left: 20px;
+  vertical-align: top;
+  font-size: 12px;
+}
+.l-snug .l-grid-item, .l-snug .form-label,
+.l-snug .form-input,
+.l-snug .form-heading > *,
+.l-snug .form-submit-button, .l-snug .split .next, .split .l-snug .next,
+.l-snug .split .previous,
+.split .l-snug .previous, .l-snug .photo, .l-snug .photo-meta-container, .l-snug .photo-meta > li, .l-snug .photo-nav, .l-snug .site-footer-about,
+.l-snug .site-footer-sublinks,
+.l-snug .site-footer-contact {
+  padding-left: 0;
+}
+.debug .l-grid-item, .debug .form-label,
+.debug .form-input,
+.debug .form-heading > *,
+.debug .form-submit-button, .debug .split .next, .split .debug .next,
+.debug .split .previous,
+.split .debug .previous, .debug .photo, .debug .photo-meta-container, .debug .photo-meta > li, .debug .photo-nav, .debug .site-footer-about,
+.debug .site-footer-sublinks,
+.debug .site-footer-contact {
+  border: 1px solid red;
+}
+
+.l-test {
+  border: 1px solid #f20505;
+  background: #eee;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/*
+Full Screen something
+ */
+/*
+Mixin to generate classes
+ */
+/**
+ * Generate them all!
+ */
+/*
+Default
+ */
+/*
+Whole
+ */
+.l-grid-item, .form-label,
+.form-input,
+.form-heading > *,
+.form-submit-button, .split .next,
+.split .previous, .photo, .photo-meta-container, .photo-meta > li, .photo-nav, .site-footer-about,
+.site-footer-sublinks,
+.site-footer-contact {
+  width: 100%;
+}
+
+.l-one-whole, .btn-max, .form-input > * {
+  width: 100%;
+}
+
+/*
+Half
+ */
+.l-one-half, .split .next,
+.split .previous {
+  width: 50%;
+}
+
+/*
+Thirds
+ */
+.l-one-third {
+  width: 33.3333%;
+}
+
+.l-two-thirds {
+  width: 66.6666%;
+}
+
+/*
+Quarters
+ */
+.l-one-quarter {
+  width: 25%;
+}
+
+.l-two-quarters {
+  width: 50%;
+}
+
+.l-three-quarters {
+  width: 75%;
+}
+
+/*
+Fifths
+ */
+.l-one-fifth {
+  width: 20%;
+}
+
+.l-two-fifths {
+  width: 40%;
+}
+
+.l-three-fifths {
+  width: 60%;
+}
+
+.l-four-fifths {
+  width: 80%;
+}
+
+/*
+Sixths
+ */
+.l-one-sixth {
+  width: 16.6666%;
+}
+
+.l-two-sixths {
+  width: 33.3333%;
+}
+
+.l-three-sixths {
+  width: 50%;
+}
+
+.l-four-sixths {
+  width: 66.6666%;
+}
+
+.l-five-sixths {
+  width: 83.3333%;
+}
+
+/*
+Push and pull classes
+ */
+/*
+Half
+ */
+.l-push-one-half {
+  margin-left: 50%;
+}
+
+.l-pull-one-half {
+  margin-right: 50%;
+}
+
+/*
+Thirds
+ */
+.l-push-one-third {
+  margin-left: 33.3333%;
+}
+
+.l-push-two-thirds {
+  margin-left: 66.6666%;
+}
+
+.l-pull-one-third {
+  margin-right: 33.3333%;
+}
+
+.l-pull-two-thirds {
+  margin-right: 66.6666%;
+}
+
+/*
+Quarters
+ */
+.l-push-one-quarter {
+  margin-left: 25%;
+}
+
+.l-push-two-quarters {
+  margin-left: 50%;
+}
+
+.l-push-three-quarters {
+  margin-left: 75%;
+}
+
+.l-pull-one-quarter {
+  margin-right: 25%;
+}
+
+.l-pull-two-quarters {
+  margin-right: 50%;
+}
+
+.l-pull-three-quarters {
+  margin-right: 75%;
+}
+
+/*
+Fifths
+ */
+.l-push-one-fifth {
+  margin-left: 20%;
+}
+
+.l-push-two-fifths {
+  margin-left: 40%;
+}
+
+.l-push-three-fifths {
+  margin-left: 60%;
+}
+
+.l-push-four-fifths {
+  margin-left: 80%;
+}
+
+.l-pull-one-fifth {
+  margin-right: 20%;
+}
+
+.l-pull-two-fifths {
+  margin-right: 40%;
+}
+
+.l-pull-three-fifths {
+  margin-right: 60%;
+}
+
+.l-pull-four-fifths {
+  margin-right: 80%;
+}
+
+/*
+Sixths
+ */
+.l-push-one-sixth {
+  margin-left: 16.6666%;
+}
+
+.l-push-two-sixths {
+  margin-left: 33.3333%;
+}
+
+.l-push-three-sixths {
+  margin-left: 50%;
+}
+
+.l-push-four-sixths {
+  margin-left: 66.6666%;
+}
+
+.l-push-five-sixths {
+  margin-left: 83.3333%;
+}
+
+.l-pull-one-sixth {
+  margin-right: 16.6666%;
+}
+
+.l-pull-two-sixths {
+  margin-right: 33.3333%;
+}
+
+.l-pull-three-sixths {
+  margin-right: 50%;
+}
+
+.l-pull-four-sixths {
+  margin-right: 66.6666%;
+}
+
+.l-pull-five-sixths {
+  margin-right: 83.3333%;
+}
+
+/*
+Small breakpoint
+ */
+@media (min-width: 400px) {
+  /*
+  Whole
+   */
+  .l-small-grid-item {
+    width: 100%;
+  }
+
+  .l-small-one-whole {
+    width: 100%;
+  }
+
+  /*
+  Half
+   */
+  .l-small-one-half, .site-footer-sublinks,
+  .site-footer-contact {
+    width: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-small-one-third, .form-label, .photo-meta > li {
+    width: 33.3333%;
+  }
+
+  .l-small-two-thirds, .form-input, .form-heading > *, .form-submit-button {
+    width: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-small-one-quarter {
+    width: 25%;
+  }
+
+  .l-small-two-quarters {
+    width: 50%;
+  }
+
+  .l-small-three-quarters {
+    width: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-small-one-fifth {
+    width: 20%;
+  }
+
+  .l-small-two-fifths {
+    width: 40%;
+  }
+
+  .l-small-three-fifths {
+    width: 60%;
+  }
+
+  .l-small-four-fifths {
+    width: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-small-one-sixth {
+    width: 16.6666%;
+  }
+
+  .l-small-two-sixths {
+    width: 33.3333%;
+  }
+
+  .l-small-three-sixths {
+    width: 50%;
+  }
+
+  .l-small-four-sixths {
+    width: 66.6666%;
+  }
+
+  .l-small-five-sixths {
+    width: 83.3333%;
+  }
+
+  /*
+  Push and pull classes
+   */
+  /*
+  Half
+   */
+  .l-small-push-one-half {
+    margin-left: 50%;
+  }
+
+  .l-small-pull-one-half {
+    margin-right: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-small-push-one-third, .form-input-inline .form-input, .form-heading > *, .form-submit-button {
+    margin-left: 33.3333%;
+  }
+
+  .l-small-push-two-thirds {
+    margin-left: 66.6666%;
+  }
+
+  .l-small-pull-one-third {
+    margin-right: 33.3333%;
+  }
+
+  .l-small-pull-two-thirds {
+    margin-right: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-small-push-one-quarter {
+    margin-left: 25%;
+  }
+
+  .l-small-push-two-quarters {
+    margin-left: 50%;
+  }
+
+  .l-small-push-three-quarters {
+    margin-left: 75%;
+  }
+
+  .l-small-pull-one-quarter {
+    margin-right: 25%;
+  }
+
+  .l-small-pull-two-quarters {
+    margin-right: 50%;
+  }
+
+  .l-small-pull-three-quarters {
+    margin-right: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-small-push-one-fifth {
+    margin-left: 20%;
+  }
+
+  .l-small-push-two-fifths {
+    margin-left: 40%;
+  }
+
+  .l-small-push-three-fifths {
+    margin-left: 60%;
+  }
+
+  .l-small-push-four-fifths {
+    margin-left: 80%;
+  }
+
+  .l-small-pull-one-fifth {
+    margin-right: 20%;
+  }
+
+  .l-small-pull-two-fifths {
+    margin-right: 40%;
+  }
+
+  .l-small-pull-three-fifths {
+    margin-right: 60%;
+  }
+
+  .l-small-pull-four-fifths {
+    margin-right: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-small-push-one-sixth {
+    margin-left: 16.6666%;
+  }
+
+  .l-small-push-two-sixths {
+    margin-left: 33.3333%;
+  }
+
+  .l-small-push-three-sixths {
+    margin-left: 50%;
+  }
+
+  .l-small-push-four-sixths {
+    margin-left: 66.6666%;
+  }
+
+  .l-small-push-five-sixths {
+    margin-left: 83.3333%;
+  }
+
+  .l-small-pull-one-sixth {
+    margin-right: 16.6666%;
+  }
+
+  .l-small-pull-two-sixths {
+    margin-right: 33.3333%;
+  }
+
+  .l-small-pull-three-sixths {
+    margin-right: 50%;
+  }
+
+  .l-small-pull-four-sixths {
+    margin-right: 66.6666%;
+  }
+
+  .l-small-pull-five-sixths {
+    margin-right: 83.3333%;
+  }
+}
+/*
+Medium
+ */
+@media (min-width: 600px) {
+  /*
+  Whole
+   */
+  .l-medium-grid-item {
+    width: 100%;
+  }
+
+  .l-medium-one-whole {
+    width: 100%;
+  }
+
+  /*
+  Half
+   */
+  .l-medium-one-half, .site-footer-about {
+    width: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-medium-one-third {
+    width: 33.3333%;
+  }
+
+  .l-medium-two-thirds {
+    width: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-medium-one-quarter, .site-footer-sublinks,
+  .site-footer-contact {
+    width: 25%;
+  }
+
+  .l-medium-two-quarters {
+    width: 50%;
+  }
+
+  .l-medium-three-quarters {
+    width: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-medium-one-fifth {
+    width: 20%;
+  }
+
+  .l-medium-two-fifths {
+    width: 40%;
+  }
+
+  .l-medium-three-fifths {
+    width: 60%;
+  }
+
+  .l-medium-four-fifths {
+    width: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-medium-one-sixth {
+    width: 16.6666%;
+  }
+
+  .l-medium-two-sixths {
+    width: 33.3333%;
+  }
+
+  .l-medium-three-sixths {
+    width: 50%;
+  }
+
+  .l-medium-four-sixths {
+    width: 66.6666%;
+  }
+
+  .l-medium-five-sixths {
+    width: 83.3333%;
+  }
+
+  /*
+  Push and pull classes
+   */
+  /*
+  Half
+   */
+  .l-medium-push-one-half {
+    margin-left: 50%;
+  }
+
+  .l-medium-pull-one-half {
+    margin-right: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-medium-push-one-third {
+    margin-left: 33.3333%;
+  }
+
+  .l-medium-push-two-thirds {
+    margin-left: 66.6666%;
+  }
+
+  .l-medium-pull-one-third {
+    margin-right: 33.3333%;
+  }
+
+  .l-medium-pull-two-thirds {
+    margin-right: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-medium-push-one-quarter {
+    margin-left: 25%;
+  }
+
+  .l-medium-push-two-quarters {
+    margin-left: 50%;
+  }
+
+  .l-medium-push-three-quarters {
+    margin-left: 75%;
+  }
+
+  .l-medium-pull-one-quarter {
+    margin-right: 25%;
+  }
+
+  .l-medium-pull-two-quarters {
+    margin-right: 50%;
+  }
+
+  .l-medium-pull-three-quarters {
+    margin-right: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-medium-push-one-fifth {
+    margin-left: 20%;
+  }
+
+  .l-medium-push-two-fifths {
+    margin-left: 40%;
+  }
+
+  .l-medium-push-three-fifths {
+    margin-left: 60%;
+  }
+
+  .l-medium-push-four-fifths {
+    margin-left: 80%;
+  }
+
+  .l-medium-pull-one-fifth {
+    margin-right: 20%;
+  }
+
+  .l-medium-pull-two-fifths {
+    margin-right: 40%;
+  }
+
+  .l-medium-pull-three-fifths {
+    margin-right: 60%;
+  }
+
+  .l-medium-pull-four-fifths {
+    margin-right: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-medium-push-one-sixth {
+    margin-left: 16.6666%;
+  }
+
+  .l-medium-push-two-sixths {
+    margin-left: 33.3333%;
+  }
+
+  .l-medium-push-three-sixths {
+    margin-left: 50%;
+  }
+
+  .l-medium-push-four-sixths {
+    margin-left: 66.6666%;
+  }
+
+  .l-medium-push-five-sixths {
+    margin-left: 83.3333%;
+  }
+
+  .l-medium-pull-one-sixth {
+    margin-right: 16.6666%;
+  }
+
+  .l-medium-pull-two-sixths {
+    margin-right: 33.3333%;
+  }
+
+  .l-medium-pull-three-sixths {
+    margin-right: 50%;
+  }
+
+  .l-medium-pull-four-sixths {
+    margin-right: 66.6666%;
+  }
+
+  .l-medium-pull-five-sixths {
+    margin-right: 83.3333%;
+  }
+}
+/*
+Large
+ */
+@media (min-width: 800px) {
+  /*
+  Whole
+   */
+  .l-large-grid-item {
+    width: 100%;
+  }
+
+  .l-large-one-whole {
+    width: 100%;
+  }
+
+  /*
+  Half
+   */
+  .l-large-one-half {
+    width: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-large-one-third {
+    width: 33.3333%;
+  }
+
+  .l-large-two-thirds {
+    width: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-large-one-quarter {
+    width: 25%;
+  }
+
+  .l-large-two-quarters {
+    width: 50%;
+  }
+
+  .l-large-three-quarters {
+    width: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-large-one-fifth {
+    width: 20%;
+  }
+
+  .l-large-two-fifths {
+    width: 40%;
+  }
+
+  .l-large-three-fifths {
+    width: 60%;
+  }
+
+  .l-large-four-fifths {
+    width: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-large-one-sixth {
+    width: 16.6666%;
+  }
+
+  .l-large-two-sixths {
+    width: 33.3333%;
+  }
+
+  .l-large-three-sixths {
+    width: 50%;
+  }
+
+  .l-large-four-sixths {
+    width: 66.6666%;
+  }
+
+  .l-large-five-sixths {
+    width: 83.3333%;
+  }
+
+  /*
+  Push and pull classes
+   */
+  /*
+  Half
+   */
+  .l-large-push-one-half {
+    margin-left: 50%;
+  }
+
+  .l-large-pull-one-half {
+    margin-right: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-large-push-one-third {
+    margin-left: 33.3333%;
+  }
+
+  .l-large-push-two-thirds {
+    margin-left: 66.6666%;
+  }
+
+  .l-large-pull-one-third {
+    margin-right: 33.3333%;
+  }
+
+  .l-large-pull-two-thirds {
+    margin-right: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-large-push-one-quarter {
+    margin-left: 25%;
+  }
+
+  .l-large-push-two-quarters {
+    margin-left: 50%;
+  }
+
+  .l-large-push-three-quarters {
+    margin-left: 75%;
+  }
+
+  .l-large-pull-one-quarter {
+    margin-right: 25%;
+  }
+
+  .l-large-pull-two-quarters {
+    margin-right: 50%;
+  }
+
+  .l-large-pull-three-quarters {
+    margin-right: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-large-push-one-fifth {
+    margin-left: 20%;
+  }
+
+  .l-large-push-two-fifths {
+    margin-left: 40%;
+  }
+
+  .l-large-push-three-fifths {
+    margin-left: 60%;
+  }
+
+  .l-large-push-four-fifths {
+    margin-left: 80%;
+  }
+
+  .l-large-pull-one-fifth {
+    margin-right: 20%;
+  }
+
+  .l-large-pull-two-fifths {
+    margin-right: 40%;
+  }
+
+  .l-large-pull-three-fifths {
+    margin-right: 60%;
+  }
+
+  .l-large-pull-four-fifths {
+    margin-right: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-large-push-one-sixth {
+    margin-left: 16.6666%;
+  }
+
+  .l-large-push-two-sixths {
+    margin-left: 33.3333%;
+  }
+
+  .l-large-push-three-sixths {
+    margin-left: 50%;
+  }
+
+  .l-large-push-four-sixths {
+    margin-left: 66.6666%;
+  }
+
+  .l-large-push-five-sixths {
+    margin-left: 83.3333%;
+  }
+
+  .l-large-pull-one-sixth {
+    margin-right: 16.6666%;
+  }
+
+  .l-large-pull-two-sixths {
+    margin-right: 33.3333%;
+  }
+
+  .l-large-pull-three-sixths {
+    margin-right: 50%;
+  }
+
+  .l-large-pull-four-sixths {
+    margin-right: 66.6666%;
+  }
+
+  .l-large-pull-five-sixths {
+    margin-right: 83.3333%;
+  }
+}
+/*
+xlarge
+ */
+@media (min-width: 1000px) {
+  /*
+  Whole
+   */
+  .l-xlarge-grid-item {
+    width: 100%;
+  }
+
+  .l-xlarge-one-whole {
+    width: 100%;
+  }
+
+  /*
+  Half
+   */
+  .l-xlarge-one-half {
+    width: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-xlarge-one-third {
+    width: 33.3333%;
+  }
+
+  .l-xlarge-two-thirds {
+    width: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-xlarge-one-quarter {
+    width: 25%;
+  }
+
+  .l-xlarge-two-quarters {
+    width: 50%;
+  }
+
+  .l-xlarge-three-quarters {
+    width: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-xlarge-one-fifth {
+    width: 20%;
+  }
+
+  .l-xlarge-two-fifths {
+    width: 40%;
+  }
+
+  .l-xlarge-three-fifths {
+    width: 60%;
+  }
+
+  .l-xlarge-four-fifths {
+    width: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-xlarge-one-sixth {
+    width: 16.6666%;
+  }
+
+  .l-xlarge-two-sixths {
+    width: 33.3333%;
+  }
+
+  .l-xlarge-three-sixths {
+    width: 50%;
+  }
+
+  .l-xlarge-four-sixths {
+    width: 66.6666%;
+  }
+
+  .l-xlarge-five-sixths {
+    width: 83.3333%;
+  }
+
+  /*
+  Push and pull classes
+   */
+  /*
+  Half
+   */
+  .l-xlarge-push-one-half {
+    margin-left: 50%;
+  }
+
+  .l-xlarge-pull-one-half {
+    margin-right: 50%;
+  }
+
+  /*
+  Thirds
+   */
+  .l-xlarge-push-one-third {
+    margin-left: 33.3333%;
+  }
+
+  .l-xlarge-push-two-thirds {
+    margin-left: 66.6666%;
+  }
+
+  .l-xlarge-pull-one-third {
+    margin-right: 33.3333%;
+  }
+
+  .l-xlarge-pull-two-thirds {
+    margin-right: 66.6666%;
+  }
+
+  /*
+  Quarters
+   */
+  .l-xlarge-push-one-quarter {
+    margin-left: 25%;
+  }
+
+  .l-xlarge-push-two-quarters {
+    margin-left: 50%;
+  }
+
+  .l-xlarge-push-three-quarters {
+    margin-left: 75%;
+  }
+
+  .l-xlarge-pull-one-quarter {
+    margin-right: 25%;
+  }
+
+  .l-xlarge-pull-two-quarters {
+    margin-right: 50%;
+  }
+
+  .l-xlarge-pull-three-quarters {
+    margin-right: 75%;
+  }
+
+  /*
+  Fifths
+   */
+  .l-xlarge-push-one-fifth {
+    margin-left: 20%;
+  }
+
+  .l-xlarge-push-two-fifths {
+    margin-left: 40%;
+  }
+
+  .l-xlarge-push-three-fifths {
+    margin-left: 60%;
+  }
+
+  .l-xlarge-push-four-fifths {
+    margin-left: 80%;
+  }
+
+  .l-xlarge-pull-one-fifth {
+    margin-right: 20%;
+  }
+
+  .l-xlarge-pull-two-fifths {
+    margin-right: 40%;
+  }
+
+  .l-xlarge-pull-three-fifths {
+    margin-right: 60%;
+  }
+
+  .l-xlarge-pull-four-fifths {
+    margin-right: 80%;
+  }
+
+  /*
+  Sixths
+   */
+  .l-xlarge-push-one-sixth {
+    margin-left: 16.6666%;
+  }
+
+  .l-xlarge-push-two-sixths {
+    margin-left: 33.3333%;
+  }
+
+  .l-xlarge-push-three-sixths {
+    margin-left: 50%;
+  }
+
+  .l-xlarge-push-four-sixths {
+    margin-left: 66.6666%;
+  }
+
+  .l-xlarge-push-five-sixths {
+    margin-left: 83.3333%;
+  }
+
+  .l-xlarge-pull-one-sixth {
+    margin-right: 16.6666%;
+  }
+
+  .l-xlarge-pull-two-sixths {
+    margin-right: 33.3333%;
+  }
+
+  .l-xlarge-pull-three-sixths {
+    margin-right: 50%;
+  }
+
+  .l-xlarge-pull-four-sixths {
+    margin-right: 66.6666%;
+  }
+
+  .l-xlarge-pull-five-sixths {
+    margin-right: 83.3333%;
+  }
+}
+/*------------------------------------*\
+    Simple Buttons & Links
+\*------------------------------------*/
+.btn, .split .next a,
+.split .previous a {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border: 2px solid #383838;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:hover, .split .next a:hover,
+.split .previous a:hover {
+  text-decoration: none;
+}
+
+.btn-large {
+  padding: 1em 2em;
+}
+
+.btn-secondary {
+  background-color: #87c3ab;
+}
+.btn-secondary:hover {
+  background-color: #a9d4c3;
+}
+
+.link-secondary {
+  color: #87c3ab;
+}
+.link-secondary:hover {
+  color: #a9d4c3;
+}
+
+/*------------------------------------*\
+    Forms
+\*------------------------------------*/
+/*
+Default fieldsets to nothing
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/**
+ * We uses classes so we can use any form elements easily as well as using the
+ * grid framework. Default is stacked.
+
+<div class="form-field">
+    <label class="form-label" for="example">Example Label</label>
+    <div class="form-input">
+        <input  id="example" type="text">
+    </div>
+</div>
+
+ *
+ */
+/*
+Mixin to generate form layout
+ */
+/*
+Layout the form
+ */
+.form-field,
+.form-heading,
+.form-submit {
+  margin-bottom: 20px;
+}
+
+/*
+Change below to change the default layout
+ */
+/*
+Default all elements to be full width
+ */
+.form-input > * {
+  /*
+  For the inline elements like checkboxes in form terms and conditions etc.
+   */
+}
+.form-input-inline .form-input > * {
+  width: auto;
+}
+
+/*
+Radio button and checkbox lists
+ */
+/*
+Pad out and align any labels
+ */
+input[type=radio],
+input[type=checkbox] {
+  vertical-align: middle;
+}
+input[type=radio] + label,
+input[type=checkbox] + label {
+  padding-left: 0.5em;
+  vertical-align: middle;
+}
+
+/*
+The following are mostly styling
+ */
+/*
+Form Errors
+ */
+.form-error {
+  color: #f20505;
+  display: inline-block;
+}
+
+/*
+Form Terms
+ */
+/*
+Extra info
+ */
+.form-extra-info {
+  display: block;
+}
+
+/*
+Form labels flush right
+ */
+/*
+Site Specific
+ */
+@font-face {
+  font-family: 'typography-london-icons';
+  src: url("fonts/typography-london-icons.eot");
+}
+
+@font-face {
+  font-family: 'typography-london-icons';
+  src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRk9UVE8AAA4gAAsAAAAAF8QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABCAAACsIAABH0HIxALkZGVE0AAAvMAAAAGgAAABxngGO2R0RFRgAAC+gAAAAdAAAAIAA5AARPUy8yAAAMCAAAAEsAAABgL9zc12NtYXAAAAxUAAAAUQAAAWqwxeO5aGVhZAAADKgAAAAuAAAANvx5AaNoaGVhAAAM2AAAACAAAAAkBCgAEWhtdHgAAAz4AAAAHgAAADAV2gDgbWF4cAAADRgAAAAGAAAABgAMUABuYW1lAAANIAAAAPQAAAJVv/2vcHBvc3QAAA4UAAAADAAAACAAAwAAeJyVVmtwlOUVPt/msktck0ASCE5IkK6QNknZIErQoA4qkk6R6Zgwjk0dglhRSEATqQnWKZMSgUWikWnpRAIVp1aCjuM4qTLiOKY6chlCI61KKIEgJhguQi67yV5On+f9Nhc79Uc3k/M933s577k857yfJbGxYllWelX1urWPPVW2blV13pq1FSvXVuQ9/sjaikqxHGLJHYGZjsCsmEB6rM8d43PHZibI1Acmqc83CtzOrasD+wNVcRmWJGWIJGdYUyZmyISMib2T5HrqcEmSTJZp4pEcmSPz5S65T+6XR+XZpysev9fr9dqPfPsxx37cbD9usR+32o959qMAj0Xe+fPtx0Lz8Hp/wI0f8k7Eet7abG2xtlo+a5v1grXdqrdetF4SN012yFTJl1PWMcemmN2xt8etSjiQ/Gbye4lHjqT55/rnBvHf2+vfETR/cYmBuUfSOMa/nF6O+c24StNn76qVffRomurR6Z+o5GwpUP3nlV0qt7yVGhUck58kP6Jyc+ftEOeKVU/UnOHYCtXDS05QfM6xs9zbBFUZ+zNV/zzv56rhN0JpKr9ef1ilxN+m8sCkCpUnXPkUczh2THX/pQbVP225FWJTVhDap8dO9fkApDPYjc01ZzMTA1WBuWmNjRs2ZAX7navxywylxq9e3dyc5e93NuKXeSS+0fw2bPghqJFdHTPS1JrhOR0q1si/O2Y4Vc+I1QwZm96c6T/hiwPGr1klK9jjg1R1BR9WcXhOw43S54b9MK/uuWGfD0v2107y+SpVXw33B0vjgveo7NoYj0ie3xiv2kvRE+5XyaAo2hiP8M7aGA/Hqn4JzcLRNx3uuNpa1eHaSRAY0RBFeGO8K1GtO3McahU/lAGVXXu/VJnSfg0q85C2aaXZECsfwtixkxSYnbZ8oS20J39mdHFX418gdn9kj5m9eP0wUyMfnYioFg60Ihx5616leC1OJfcXFyGWxao8+PplxCHYw1c48jmJMIJ8qq8/mAz4xjBFyKWR9vpSI+IS/an+Yhj8/tJOlflLz6h++vaNKovenh4VHIPo5Gt0AkuiE9h2xt5rtpkJjmUGU/2pac34Zao8Uvpj2BFu71OJm/mtauT4eaA1W32U21x78cvsjd+7t7IyC5YOv1zFJd8Qrec2hGX4q8ku6smOb25evToruOO/GFWMw1R+BB8l4/XvosK8jo7pOUbgFNGp0df/MTa6NxORCVDtWBSmUnw/MvrNiMcwvY3JPLfqKdW/rXtN9WR+tuoXa+DmBlbW1Rt2g1Czb1B9+YsErH72+DeuUHE8pmsxKLNAHlmTPYjVt69USTxfRg2zVLJffppaK1UW15ditXf3hyCbNBQd8FchcZ9Mfl4lP/M91eMLnlQp/OP2qOCYzP74RZXbLjxjCz12drE9pq000wiOYe86qtqMNlDesgi0zh6E63l9LSrLuWfFLXepLBz4WOXJAw/DiIp3b/P1qn6EZMlsatl79x9U29lgdme+r7rr07+qHkxYoLr93lfh7Ev3vQW5JzZd5c4123AeLSz94Amk9dCMf6jEfJGA89BEURJVH6ik1/8KJdFZqJK5pN3nMg+OPoyiQN/TLt/dUdHNUJuxs+/kUuTZY/ZuKMtKHFTHlJbP1Ppdw0/T2C1QJI6adoD0VewUr4BvXmyw2rzjUbgDaZDunUB1HhivC9K5Gd0z3ILEa9EMhAmrNdJQMR4FuxGJSDX4FGzaDlRWRbQtisKeV7YC7tsHDRiUWAxKnOf3QDzPWXgZryXLVCaULHMRFhsIO/ftV4nvO4rgxzYsZKxy6Ub8/+tGpMZFWY2y0rpkopNAbiT+2yLcJf304yI0asB7QPUSN4a8x1Uv0JK0lsNolzhKEqBWz/R1ITd6xnuM9jhUv24Dd/pbTmN5+YcUH4xHZgJLfNxynLWOMIiUbUGA6KK0pjyPqdYU21s9C23iZKi6OmpU3N9H51vQk5JpX0/D3TDNU6c6tGkIMePYQF0SjOw7irqru6kRRoYxKo4iXFrh8oOIDeMVgv1MSR1l02+iaYvQe0zBKncR4tCKXh/i8kGqCxdegnYeFkaugDZjB/cOtJyGmsGiWyG/RsTExY3dTetVJtbdhAuGMVb3z+jxU4YIsIIkCkKjOLzHXWMQB+7DhWXREpjjGzW1bAvYE27L30LphYyYzDYstP2waaEXeXycey7yx7gmpBeqXq7uGI+ur0v6LcJHLwdonZa/RFp0PAoVTHykaB4NrXSNQdK2OToNwvDETUM+O7KGhFhZQOq12XtspJ5GLCFvUTeHWEcMv30G4gnF7Pc0KZ57LjL7CUioXmEGEzvuV71WdB3R0iiayAwM0tKUphcQs/KDMLITWrWXhD9VhItogDZ9ZSfWyCC4J8KMDcNIERwINC+KgmSamQ2XLLMdYyhz7PKJOse0REyZGw+JzES441HfSHWFPe8gbbQlDMaLA2yF24dddqFrCJQQFw0MstDdVDmE1iS55EoPfZ9NLvWjJmROdQeK/Y4aJ2RBSYlKEuM1h5WdRTKPoZtY47nUOLUOnxIFrIcUxEJyKCagzCUH0cQHBJbkFF6GORPK250oGu5OLtuDoIItMomdhEbZu6XvazhDjYK6EIsEF6t7pytxs1oNRQXm/kFJqn6Zj07SzxrpYI30FLmREfg1gg6hmJnxC5w9yaD1k+9yV0Oe0wd+DKFHiLv6KjLM+naBlpJlB/B+dHKS2Ennk+jA9ayhMeRkhaVVX4Vt07p3Qk7mmUPGHx53jU4lsdc62G6cTcvhhNFoVrvYieQ692KmDFYklKHChmnFBOZNB0qy6eS/QDnTLumGv2UQuSxrIuqPokG2uWFuNs0hwHRfS38MVxvr/qrpOVTwXWsKeHK5yA15hSyNsAdcZQ2G0NfNbnG2lUIjSRBHYvjBc4lh7x1DZtYiO7GDXZg2o/24bT90oGk9TuhH26ilvyW19L+51jYKViTbMdJLnlew7kLdTMgu2uskAb+FMDHWPtqTxJIzaAq5HWBws1h8pk366eFQ985NgKSZGYRVMCrASg6DvBog69FAan1mLbs/z7BGu7+DngZ5yzhQB6bjSgxnoa6e8lz9ZoyYHuyeBmQ6H462UQihlxieFERObB3jEElgzhquPmWixSsExc6et9K0pqzo7c67UCzTn0BIcTC54e6/E+0ZQbzIwrx/THJNtxhBL9gcQfF0UXdNfbSrx5Qf3EQ+b+CNkkLe7UW3I9ETGaNBnpXKJo81SyHjWcRCxiawTVn8HNC2lkNOFtACMLZtjl1UMplp7OGi6bzeetjfprOXsiDF454LbbPa8uleBN9QrUnRb40p7OYgOTQ0LBpF96AjpLAQkqFsRMyLopTygzvNorHlREejyoza9NaJ5ijXGLSnNUh7uAU0LRiPcN5z9gl6hd1wBCGtF/mtw7PMd8Q4xLO0p6QEROouvITDPA25k42nuAMGGRcPs3SR31c38kNsDJ0nVW5A29DTSC5ukeXjUQfqUSbwQ+ZLNlhzoY4hzhr1ZgeULibaE0XnyTCqx2slJw7b59po0Pu+UeCjwmdc9oNn3Rc9NYWfiVw6go7QzmdsvbB9uX0M0IooMj4ab2ehZZgrawTl2rPGFbMDSstG0Qo7ArbgaZjYNh6ZbZ6WTps8rsTQkkBVbGhHYIczMbAjNbAkzedO+A8J5V7hAAB4nGNgYGBkAIIztovOg+izCxOKYTQATGsG/gAAeJxjYGRgYOADYgkGEGBiYARCbiBmAfMYAATDAD4AAAB4nGNgZvzDOIGBlYGD0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAMBBJMhIM01hcHhAcOH2YwP/j9g0GN8wKDQwMDACFegAISMAHz/DbUAeJxjYGBgZoBgGQZGBhBIAfIYwXwWBg8gzcfAwcDEwMbA8ID5AccHhg8zP8z+/x+k8AHDA1YEX4FRgUGAm7+APx9qDhJgBOrGEBxhAABqxhIIAAAAeJxjYGRgYADiR3nic+P5bb4ycDMxgMDZhQnFCPr/AyZxxgdALgcDWBoANYQLGAAAeJxjYGRgYHzw/wGDHpMKA8M/BiZxBqAICuABAHMpBDp4nGNiYGBgYmBwQMIMSFgBTKswMDBuYwADACb2AdAAAAAAUAAADAAAeJytkEFuwjAQRb8hIFV0XVj6Ao4cFwmJ7iP2ldhTCCEqsiMTqcpFeoUeqdfhx50NCxaVsGT7+c8fe8YAnvENhWEozGGFR9Q/hMd4xa9whrl6E55gpj6Fp9R/6FTZE5U8ZQ08wgIb4TGOCMIZcjUTnuBFvQtPqX+hQ4+W3hoRO9KJZ4MzFY9DWg0a7BNdgK5vQx137ak35+APwZtmHzwDdzNubWWSu7RHPlpBw7EJy33N+b9y/nIcVlSXnI73FPxClMF3ZYh1pV1u9VrfKZsRtzJL42zBpEd9xZZdRTqa5NSsaOgP2ypemuB1kduHvXUFGc5wjHicY2BmwAsAAH0ABA==) format("woff"), url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'typography-london-icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-arrow-right, .icon-arrow-left, .icon-location, .icon-calendar, .icon-tag, .icon-camera, .icon-user, .icon-eye, .icon-twitter, .icon-github {
+  font-family: 'typography-london-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-arrow-right:before {
+  content: "\e000";
+}
+
+.icon-arrow-left:before {
+  content: "\e001";
+}
+
+.icon-location:before {
+  content: "\e002";
+}
+
+.icon-calendar:before {
+  content: "\e003";
+}
+
+.icon-tag:before {
+  content: "\e005";
+}
+
+.icon-camera:before {
+  content: "\e006";
+}
+
+.icon-user:before {
+  content: "\e007";
+}
+
+.icon-eye:before {
+  content: "\e008";
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.footer-title,
+.main-navigation a,
+.split .next a,
+.split .previous a,
+.photo-title,
+.photo-meta-title,
+h6 {
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+/*
+Site Modules
+ */
+/*
+Header
+ */
+.site-header {
+  background: white;
+}
+.site-header h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 2px solid #383838;
+  padding: 0.5em;
+}
+
+.main-navigation {
+  display: inline-block;
+}
+.main-navigation a {
+  border: 0;
+  padding: 0.5em;
+}
+
+/*
+Main Content
+ */
+.site-content {
+  background: white;
+}
+
+.split .next,
+.split .previous {
+  margin-bottom: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+.split .next i,
+.split .previous i {
+  font-size: 8px;
+}
+.split .previous {
+  text-align: left;
+}
+
+.photo {
+  margin-bottom: 20px;
+}
+
+.photo-title {
+  margin-bottom: 20px;
+}
+
+.photo-meta > li {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.photo-meta-title {
+  font-size: 13px;
+  font-weight: normal !important;
+  display: inline-block;
+}
+
+.photo-meta-title + p {
+  display: inline-block;
+}
+
+/*
+Footer
+ */
+.site-footer {
+  color: #666666;
+}
+
+.footer-title, .main-navigation a, .split .next a,
+.split .previous a, .photo-title, .photo-meta-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sub-nav a {
+  color: inherit;
+}
+
+.map-box {
+  display: block;
+}

@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    Simple Buttons & Links
+\*------------------------------------*/
+
+.btn{
+
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    // background-color: $color-primary;
+    // color: #fff;
+    
+    border: 2px solid $color-primary;    
+    cursor: pointer;
+    text-align: center;
+    // border: 0;
+
+    &:hover{
+        text-decoration: none;
+        //background-color: lighten($color-primary, 10%);
+    }
+}
+
+.btn-large{
+    padding: 1em 2em;
+}
+
+.btn-max{
+    @extend .l-one-whole;
+}
+
+.btn-secondary{
+    background-color: $color-secondary;
+
+    &:hover{
+        background-color: lighten($color-secondary, 10%);
+    }
+}
+
+
+.link-secondary{
+    color: $color-secondary;
+
+    &:hover{
+        color: lighten($color-secondary, 10%);
+    }
+
+}
+

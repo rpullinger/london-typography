@@ -1,0 +1,200 @@
+/*------------------------------------*\
+    {{ Site Name }}
+    {{ Developer }}
+    {{ Date }}
+\*------------------------------------*/
+
+
+/*
+Starter Stuff
+ */
+@import "partials/parrot/variables"; // All the variables set for the project
+@import "partials/parrot/helpers-and-mixins"; // Mixins & Helpers
+@import "partials/parrot/normalize"; // Normalize css reset - https://github.com/necolas/normalize.css
+@import "partials/parrot/base"; // Our base setup for all the html elements
+@import "partials/parrot/grids"; // Grid System
+@import "partials/parrot/buttons"; // Button starters
+@import "partials/parrot/forms"; // Simple form starter
+
+
+/*
+Site Specific
+ */
+
+@import "partials/site/icons"; // Icon fonts
+//@import "partials/site/branding"; // Logos and branding
+
+
+%headings{
+	// text-transform: uppercase;
+	margin-bottom: $base-unit / 4;
+	font-weight: normal;
+}
+
+
+/*
+Site Modules
+ */
+
+//@import "partials/site/module-name"; // A module
+
+/*
+Header
+ */
+.site-header{
+	background: $color-light-background;
+	// text-align: center;
+
+	h1{
+		display: inline-block;
+		text-transform: uppercase;
+		border: 2px solid $color-primary;
+		padding: 0.5em;
+	}
+}
+
+.main-navigation{
+	@extend .nav;
+	display: inline-block;
+
+	a{
+		@extend .footer-title;
+		border: 0;
+		padding: 0.5em;
+	}
+}
+
+
+/*
+Main Content
+ */
+.site-content{
+	background: $color-light-background;
+}
+
+.split{
+	@extend .l-grid;
+	@extend .l-reversed;
+
+	.next,
+	.previous{
+		@extend .l-grid-item;
+		@extend .l-one-half;
+		margin-bottom: 0;
+
+		
+		line-height: 1;
+		vertical-align: middle;
+
+		a{
+			@extend .btn;
+			@extend .footer-title;
+		}
+
+		i{
+			font-size: 8px;
+		}
+	}
+
+	.previous{
+		text-align: left;
+	}
+
+}
+
+.single-photo{
+	@extend .l-grid;
+}
+
+	.photo{
+		@extend .l-grid-item;
+		margin-bottom: $base-unit;
+	}
+
+		.photo-title{
+			@extend .footer-title;
+			margin-bottom: $base-unit;
+		}
+
+	
+	.photo-meta-container{
+		@extend .l-grid-item;
+		// margin-bottom: $base-unit;
+		// text-align: center;
+	}
+
+		.photo-meta{
+			@extend .l-grid;
+
+			> li{
+				@extend .l-grid-item;
+				@extend .l-small-one-third;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+		}
+
+		.photo-meta-title{
+			@extend .footer-title;
+			font-size: 13px;
+			font-weight: normal !important;
+			display: inline-block;
+		}
+
+		.photo-meta-title + p{
+			display: inline-block;
+		}
+
+
+	.photo-nav{
+		@extend .l-grid-item;
+	}
+
+/*
+Footer
+ */
+.site-footer{
+	color: $color-dark-background;
+}
+
+	
+	.site-footer-sections{
+		@extend .l-grid;
+	}
+
+
+		.site-footer-about,
+		.site-footer-sublinks,
+		.site-footer-contact{
+			@extend .l-grid-item;
+		}
+
+		.site-footer-about{
+			@extend .l-medium-one-half;
+		}
+
+		.site-footer-sublinks,
+		.site-footer-contact{
+			@extend .l-small-one-half;
+			@extend .l-medium-one-quarter;
+		}
+
+.footer-title{
+	@extend h5;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.sub-nav{
+	@extend .nav;
+	@extend .nav-stacked;
+
+	a{
+		color: inherit;
+	}
+}
+
+.map-box{
+	display: block;
+}

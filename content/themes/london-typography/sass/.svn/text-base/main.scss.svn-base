@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    {{ Site Name }}
+    {{ Developer }}
+    {{ Date }}
+\*------------------------------------*/
+
+
+/*
+Starter Stuff
+ */
+@import "partials/parrot/variables"; // All the variables set for the project
+@import "partials/parrot/helpers-and-mixins"; // Mixins & Helpers
+@import "partials/parrot/normalize"; // Normalize css reset - https://github.com/necolas/normalize.css
+@import "partials/parrot/base"; // Our base setup for all the html elements
+@import "partials/parrot/grids"; // Grid System
+
+
+
+
+/*
+Site Specific
+ */
+
+//@import "partials/site/icon-fonts"; // Icon fonts
+//@import "partials/site/branding"; // Logos and branding
+
+
+
+
+/*
+Site Modules
+ */
+
+//@import "partials/site/module-name"; // A module

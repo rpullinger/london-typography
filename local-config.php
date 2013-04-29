@@ -1,7 +1,7 @@
 <?php
 
 /** MySQL database name */
-define('DB_NAME', 'starter');
+define('DB_NAME', 'london_typography');
 
 /** MySQL database username */
 define('DB_USER', 'root');

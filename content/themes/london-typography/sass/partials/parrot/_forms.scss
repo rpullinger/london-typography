@@ -1,0 +1,203 @@
+/*------------------------------------*\
+    Forms
+\*------------------------------------*/
+
+/*
+Default fieldsets to nothing
+ */
+fieldset{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/**
+ * We uses classes so we can use any form elements easily as well as using the
+ * grid framework. Default is stacked.
+
+<div class="form-field">
+    <label class="form-label" for="example">Example Label</label>
+    <div class="form-input">
+        <input  id="example" type="text">
+    </div>
+</div>
+
+ *
+ */
+
+/*
+Mixin to generate form layout
+ */
+@mixin form-layout($part){
+
+    // Labels
+    @if $part == "labels" {
+        .form-label{
+            @content;
+        }
+    }
+
+    // Standard Fields
+    @if $part == "fields" {
+        .form-input{
+            @content;
+        }
+    }
+
+        // Inline Fields
+        @if $part == "inline-fields" {
+            .form-input-inline .form-input{
+                @content;
+            }
+        }
+
+    // Headings
+    @if $part == "headings" {
+        .form-heading > *{
+            @content;
+        }
+    }
+
+    // Submit sections
+    @if $part == "submit" {
+        .form-submit-button{
+            @content;
+        }
+    }
+
+}
+
+/*
+Layout the form
+ */
+.form-field,
+.form-heading,
+.form-submit{
+    margin-bottom: $base-unit;
+    @extend .l-grid;
+}
+
+.form-label,
+.form-input,
+.form-heading > *,
+.form-submit-button{
+    @extend .l-grid-item;
+}
+
+/*
+Change below to change the default layout
+ */
+@include form-layout("labels"){
+    @extend .l-small-one-third;
+}
+
+@include form-layout("fields"){
+    @extend .l-small-two-thirds;
+}
+
+@include form-layout("inline-fields"){
+    @extend .l-small-push-one-third;
+}
+
+@include form-layout("headings"){
+    @extend .l-small-two-thirds;
+    @extend .l-small-push-one-third;
+}
+
+@include form-layout("submit"){
+    @extend .l-small-two-thirds;
+    @extend .l-small-push-one-third;
+}
+
+
+
+
+/*
+Default all elements to be full width
+ */
+.form-input > *{
+    @extend .l-one-whole;
+
+    /*
+    For the inline elements like checkboxes in form terms and conditions etc.
+     */
+    .form-input-inline &{
+        width: auto;
+    }
+}
+
+
+
+
+/*
+Radio button and checkbox lists
+ */
+.form-list{
+
+    ul{
+        @extend .nav;
+        @extend .nav-stacked;
+    }
+}
+
+
+
+
+/*
+Pad out and align any labels
+ */
+input[type=radio],
+input[type=checkbox]{
+
+    vertical-align: middle;
+
+    + label{
+        padding-left: 0.5em;
+        vertical-align: middle;
+    }
+
+}
+
+/*
+The following are mostly styling
+ */
+
+
+
+/*
+Form Errors
+ */
+.form-error{
+    color: $color-error;
+    display: inline-block;
+    @extend %small;
+}
+
+
+/*
+Form Terms
+ */
+.form-terms{
+    @extend %small;
+}
+
+
+
+
+/*
+Extra info
+ */
+.form-extra-info{
+    display: block;
+    @extend %small;
+}
+
+
+
+
+/*
+Form labels flush right
+ */
+%labels-flush-right{
+    text-align: right;
+}

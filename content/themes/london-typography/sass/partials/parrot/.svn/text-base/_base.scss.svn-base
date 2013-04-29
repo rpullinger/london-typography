@@ -1,0 +1,129 @@
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+
+/**
+ * This is the base starting point for all the regular html elements
+ */
+
+
+
+
+/*
+Border box everything! http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*{
+    &,
+    &:before,
+    &:after{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+/*
+Shared vertical rhythm - csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote,p,address,
+table,
+fieldset,figure,
+pre,
+%sass-margin-bottom
+{
+    margin-top: 0;
+    margin-bottom: $base-unit;
+
+    &:last-child,
+    &.last{ // remove from last if required
+       margin-bottom: 0;
+    }
+}
+
+
+
+
+ul,
+ol,
+dl{
+    padding-left: $base-unit;
+}
+
+
+
+
+/*
+Fonts and Headings
+ */
+html{
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-family: $font-body;
+    background-color: $color-body-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $font-headline;
+    font-weight: bold;
+    line-height: $headline-line-height;
+}
+
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
+
+small,
+%small{
+    font-size: $small-size;
+}
+
+
+
+/*
+Simple anchor links - sets up simple hover etc and colors
+ */
+a{
+    text-decoration: none;
+    color: $color-primary;
+    @extend %smooth;
+
+    &:hover,
+    &:active,
+    &:focus{
+        text-decoration: underline;
+    }
+}
+
+
+
+
+/*
+Make images responsive by default
+ */
+img{
+    max-width: 100%;
+}
+
+
+
+
+/*
+Use i for icons
+ */
+i{
+    font-style: normal;
+    vertical-align: middle;
+}

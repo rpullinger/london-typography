@@ -1,0 +1,225 @@
+/*------------------------------------*\
+    Common mixins & placeholders for
+    doing stuff
+\*------------------------------------*/
+
+/*
+Super simple Mixin for the responsive stuff
+ */
+@mixin breakpoint($point){
+    @media (min-width: $point){ @content; }
+}
+
+/*
+Target retina
+ */
+@mixin retina(){
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+           only screen and (   min--moz-device-pixel-ratio: 2),
+           only screen and (     -o-min-device-pixel-ratio: 2/1),
+           only screen and (        min-device-pixel-ratio: 2),
+           only screen and (                min-resolution: 192dpi),
+           only screen and (                min-resolution: 2dppx){
+
+      @content;
+
+    }
+}
+
+
+
+
+@mixin portrait(){
+    @media (orientation : portrait){
+        @content;
+    }
+}
+
+
+
+
+@mixin landscape(){
+    @media (orientation : landscape){
+        @content;
+    }
+}
+
+
+
+
+/*
+Clearfix
+ */
+%cf{
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+
+/*
+Old Style centering
+ */
+%center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/*
+Accessibility - hide the text - As HTML5 BP - https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+ */
+%accessibility{
+    border:0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+
+
+/*
+Smooth the changes
+ */
+%smooth{
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+
+
+
+/*
+Proceed - to show progression
+ */
+%proceed{
+    text-align: right;
+}
+
+
+
+/*
+Full bleed - pull items to parent sides
+ */
+%full-bleed{
+    margin-left: -$base-unit;
+    margin-right: -$base-unit;
+}
+
+
+/*------------------------------------*\
+    Navigation Helpers
+\*------------------------------------*/
+
+/*
+Navigation abstraction - http://csswizardry.com/2011/09/the-nav-abstraction/
+ */
+.nav{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    > li,
+    > li > a{
+        display: inline-block;
+        cursor: pointer;
+        position: relative; // Only required for stacking children ul
+
+        // IE8 support
+        *display: inline;
+        zoom: 1;
+    }
+
+    ul{
+        @extend .nav-stacked;
+        padding-left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+
+    > li:hover ul{
+        display: block;
+    }
+
+}
+
+/*
+Stacked Navigation
+ */
+.nav-stacked{
+
+    > li,
+    > li > a{
+        display: block;
+    }
+}
+
+/*
+Centered Navigation
+ */
+.nav-centered{
+
+    text-align: center;
+
+    > li{
+        text-align: left;
+    }
+}
+
+
+
+
+/*
+Transparent BGs with fallback for ie8 support
+ */
+@mixin bg-rgba($r, $g, $b, $a){
+    background: rgb($r, $g, $b);
+    background: rgba($r, $g, $b, $a);
+}
+
+/*------------------------------------*\
+    Image helpers
+\*------------------------------------*/
+
+/*
+Retina background images
+ */
+@mixin retina-image($img, $img2x, $width, $height){
+    background-image: url($img);
+
+    @include retina(){
+        background-image: url($img2x);
+        background-size: $width $height;
+    }
+}
+
+
+
+
+@mixin fullsizeBG($imgUrl){
+
+    background: url($imgUrl) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    //filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='$imgUrl', sizingMethod='scale')";
+
+}
+

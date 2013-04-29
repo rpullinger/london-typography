@@ -1,0 +1,416 @@
+/*------------------------------------*\
+    Grids and containers
+\*------------------------------------*/
+
+$gutter-width: $base-unit; // Default to the base unit - override if required
+
+/*
+Fixed width container
+ */
+.l-container{
+    padding: $base-unit;
+    max-width: $max-width;
+    @extend %center;
+}
+
+
+
+
+/*
+Make something full size of parent
+ */
+.l-fullscreen{
+    width: 100%;
+    min-height: 100%;
+    background-color: $color-primary;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+
+.l-vertically-center-children{
+
+    font-size: 0;
+    text-align: center;
+    padding: $base-unit;
+    height: 100%;
+
+    &:before{
+        content: '';
+
+        height: 100%;
+        width: 0;
+        margin-top: 0px;
+    }
+
+    &:before,
+    > *{
+        font-size: $base-font-size;
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    > * {
+        max-width: $max-width;
+    }
+}
+
+
+
+/**
+ * A simple responsive grid system
+ *
+ * Adapted from https://github.com/csswizardry/csswizardry-grids
+ *
+<div class="l-grid">
+    <div class="l-grid-item l-small-one-half l-medium-two-thirds">
+        <div class="l-test">
+
+            <div class="l-grid">
+                <div class="l-grid-item l-medium-one-half l-large-two-thirds">
+                    <div class="l-test"></div>
+                </div>
+                <div class="l-grid-item l-medium-one-half l-large-one-third">
+                    <div class="l-test"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="l-grid-item l-small-one-half l-medium-one-third">
+        <div class="l-test"></div>
+    </div>
+</div>
+ */
+.l-grid{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    margin-left: -$gutter-width;
+
+    font-size: 0;
+
+    &.l-reversed{
+        direction: rtl;
+        unicode-bidi: bidi-override;
+    }
+
+    &.l-centered{
+        text-align: center;
+    }
+
+    &.l-snug{
+        margin-left: 0;
+    }
+
+}
+
+.l-grid-item{
+    display: inline-block;
+    *display: inline;
+    padding-left: $gutter-width;
+    vertical-align: top;
+
+    font-size: $base-font-size;
+
+    .l-snug &{
+        padding-left: 0;
+    }
+
+    .debug &{
+        border: 1px solid red;
+    }
+}
+
+.l-test{
+    border: 1px solid $color-error;
+    background: #eee;
+    margin-bottom: $base-unit;
+    padding: $base-unit / 2;
+}
+
+
+
+
+/*
+Full Screen something
+ */
+
+
+
+
+/*
+Mixin to generate classes
+ */
+@mixin grid-breakpoint($breakpoint: ""){
+
+    /*
+    Whole
+     */
+    .l-#{$breakpoint}grid-item{
+        // Default is full width
+        width: 100%;
+    }
+
+    .l-#{$breakpoint}one-whole{
+        // Default is full width
+        width: 100%;
+    }
+
+    /*
+    Half
+     */
+    .l-#{$breakpoint}one-half{
+        width: 50%;
+    }
+
+    /*
+    Thirds
+     */
+    .l-#{$breakpoint}one-third{
+        width: 33.3333%;
+    }
+    .l-#{$breakpoint}two-thirds{
+        width: 66.6666%;
+    }
+
+    /*
+    Quarters
+     */
+    .l-#{$breakpoint}one-quarter{
+        width: 25%;
+    }
+
+    .l-#{$breakpoint}two-quarters{
+        width: 50%;
+    }
+
+    .l-#{$breakpoint}three-quarters{
+        width: 75%;
+    }
+
+    /*
+    Fifths
+     */
+    .l-#{$breakpoint}one-fifth{
+        width: 20%;
+    }
+
+    .l-#{$breakpoint}two-fifths{
+        width: 40%;
+    }
+
+    .l-#{$breakpoint}three-fifths{
+        width: 60%;
+    }
+
+    .l-#{$breakpoint}four-fifths{
+        width: 80%;
+    }
+
+    /*
+    Sixths
+     */
+    .l-#{$breakpoint}one-sixth{
+        width: 16.6666%;
+    }
+
+    .l-#{$breakpoint}two-sixths{
+        width: 33.3333%;
+    }
+
+    .l-#{$breakpoint}three-sixths{
+        width: 50%;
+    }
+
+    .l-#{$breakpoint}four-sixths{
+        width: 66.6666%;
+    }
+
+    .l-#{$breakpoint}five-sixths{
+        width: 83.3333%;
+    }
+
+    /*
+    Push and pull classes
+     */
+
+    /*
+    Half
+     */
+    .l-#{$breakpoint}push-one-half{
+        margin-left: 50%;
+
+    }
+
+    .l-#{$breakpoint}pull-one-half{
+        margin-right: 50%;
+    }
+
+    /*
+    Thirds
+     */
+    .l-#{$breakpoint}push-one-third{
+        margin-left: 33.3333%;
+    }
+    .l-#{$breakpoint}push-two-thirds{
+        margin-left: 66.6666%;
+    }
+
+    .l-#{$breakpoint}pull-one-third{
+        margin-right: 33.3333%;
+    }
+    .l-#{$breakpoint}pull-two-thirds{
+        margin-right: 66.6666%;
+    }
+
+    /*
+    Quarters
+     */
+    .l-#{$breakpoint}push-one-quarter{
+        margin-left: 25%;
+    }
+
+    .l-#{$breakpoint}push-two-quarters{
+        margin-left: 50%;
+    }
+
+    .l-#{$breakpoint}push-three-quarters{
+        margin-left: 75%;
+    }
+
+    .l-#{$breakpoint}pull-one-quarter{
+        margin-right: 25%;
+    }
+
+    .l-#{$breakpoint}pull-two-quarters{
+        margin-right: 50%;
+    }
+
+    .l-#{$breakpoint}pull-three-quarters{
+        margin-right: 75%;
+    }
+
+    /*
+    Fifths
+     */
+    .l-#{$breakpoint}push-one-fifth{
+        margin-left: 20%;
+    }
+
+    .l-#{$breakpoint}push-two-fifths{
+        margin-left: 40%;
+    }
+
+    .l-#{$breakpoint}push-three-fifths{
+        margin-left: 60%;
+    }
+
+    .l-#{$breakpoint}push-four-fifths{
+        margin-left: 80%;
+    }
+
+    .l-#{$breakpoint}pull-one-fifth{
+        margin-right: 20%;
+    }
+
+    .l-#{$breakpoint}pull-two-fifths{
+        margin-right: 40%;
+    }
+
+    .l-#{$breakpoint}pull-three-fifths{
+        margin-right: 60%;
+    }
+
+    .l-#{$breakpoint}pull-four-fifths{
+        margin-right: 80%;
+    }
+
+    /*
+    Sixths
+     */
+    .l-#{$breakpoint}push-one-sixth{
+        margin-left: 16.6666%;
+    }
+
+    .l-#{$breakpoint}push-two-sixths{
+        margin-left: 33.3333%;
+    }
+
+    .l-#{$breakpoint}push-three-sixths{
+        margin-left: 50%;
+    }
+
+    .l-#{$breakpoint}push-four-sixths{
+        margin-left: 66.6666%;
+    }
+
+    .l-#{$breakpoint}push-five-sixths{
+        margin-left: 83.3333%;
+    }
+
+    .l-#{$breakpoint}pull-one-sixth{
+        margin-right: 16.6666%;
+    }
+
+    .l-#{$breakpoint}pull-two-sixths{
+        margin-right: 33.3333%;
+    }
+
+    .l-#{$breakpoint}pull-three-sixths{
+        margin-right: 50%;
+    }
+
+    .l-#{$breakpoint}pull-four-sixths{
+        margin-right: 66.6666%;
+    }
+
+    .l-#{$breakpoint}pull-five-sixths{
+        margin-right: 83.3333%;
+    }
+
+}
+
+/**
+ * Generate them all!
+ */
+
+/*
+Default
+ */
+@include grid-breakpoint;
+
+/*
+Small breakpoint
+ */
+@include breakpoint($s-start){
+    @include grid-breakpoint('small-');
+}
+
+/*
+Medium
+ */
+@include breakpoint($m-start){
+    @include grid-breakpoint('medium-');
+}
+
+/*
+Large
+ */
+@include breakpoint($l-start){
+    @include grid-breakpoint('large-');
+}
+
+/*
+xlarge
+ */
+@include breakpoint($xl-start){
+    @include grid-breakpoint('xlarge-');
+}
+
+
