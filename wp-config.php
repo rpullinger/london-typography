@@ -20,7 +20,7 @@ define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/content');
 define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 
-define('WP_DEFAULT_THEME', 'starter');
+define('WP_DEFAULT_THEME', 'london-typography');
 
 // ** MySQL settings - Local config stuff
 // http://markjaquith.wordpress.com/2011/06/24/wordpress-local-dev-tips/
