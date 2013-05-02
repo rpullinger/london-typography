@@ -31,6 +31,13 @@ Site Specific
 	font-weight: normal;
 }
 
+%site-title{
+	@extend h5;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
 
 /*
 Site Modules
@@ -45,22 +52,57 @@ Header
 	background: $color-light-background;
 	// text-align: center;
 
-	h1{
-		display: inline-block;
-		text-transform: uppercase;
-		border: 2px solid $color-primary;
-		padding: 0.5em;
+	
+
+	.l-container{
+		padding-bottom: 0;
+	}
+
+		h1{
+			display: inline-block;
+			text-transform: uppercase;
+			border: 2px solid $color-primary;
+			padding: 0.5em;
+		}
+}
+
+
+@include breakpoint($m-start){
+	
+	.l-header-container{
+		display: table;
+		width: 100%;
+	}
+
+	.l-logo,
+	.l-navigation{
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.l-navigation{
+		text-align: right;
 	}
 }
+
+	
+
+
 
 .main-navigation{
 	@extend .nav;
 	display: inline-block;
 
 	a{
-		@extend .footer-title;
+		@extend %site-title;
 		border: 0;
-		padding: 0.5em;
+
+		@include breakpoint($m-start){
+			padding-left: 1em;
+			padding-right: 0em;
+		}
+
+		padding: 1em 1em 0 0;
 	}
 }
 
@@ -88,7 +130,7 @@ Main Content
 
 		a{
 			@extend .btn;
-			@extend .footer-title;
+			@extend %site-title;
 		}
 
 		i{
@@ -112,7 +154,7 @@ Main Content
 	}
 
 		.photo-title{
-			@extend .footer-title;
+			@extend %site-title;
 			margin-bottom: $base-unit;
 		}
 
@@ -135,7 +177,7 @@ Main Content
 		}
 
 		.photo-meta-title{
-			@extend .footer-title;
+			@extend %site-title;
 			font-size: 13px;
 			font-weight: normal !important;
 			display: inline-block;
@@ -162,38 +204,33 @@ Footer
 		@extend .l-grid;
 	}
 
-
-		.site-footer-about,
-		.site-footer-sublinks,
-		.site-footer-contact{
+		.l-footer-widget{
 			@extend .l-grid-item;
+			@extend .l-small-one-quarter;
+			margin-bottom: $base-unit;
+
+			&:first-child{
+				@extend .l-small-one-half;
+			}
 		}
 
-		.site-footer-about{
-			@extend .l-medium-one-half;
-		}
 
-		.site-footer-sublinks,
-		.site-footer-contact{
-			@extend .l-small-one-half;
-			@extend .l-medium-one-quarter;
-		}
-
-.footer-title{
-	@extend h5;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 1px;
-}
-
-.sub-nav{
-	@extend .nav;
-	@extend .nav-stacked;
-
-	a{
-		color: inherit;
+	.widget-title{
+		@extend %site-title;
 	}
-}
+
+	.widget ul{
+		@extend .nav;
+		@extend .nav-stacked;
+
+		a{
+			color: inherit;
+			display: inline;
+		}
+	}
+
+
+
 
 .map-box{
 	display: block;

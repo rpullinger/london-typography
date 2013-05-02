@@ -4,15 +4,21 @@
 <body>
 
 	<header class="site-header">
-        <div class="l-container">
-            <h1>Typography in London</h1>
-            
-            <!-- <nav> -->
-                <ul class="nav main-navigation">
-                    <li><a href="">Latest</a></li>
-                    <li><a href="">Submit</a></li>
-                </ul>
-            <!-- </nav> -->
-
-        </div>
-    </header>
+		<div class="l-container">
+			
+            <div class="l-header-container">
+            	<div class="l-logo">
+            		<h1>{{title}}</h1>
+            	</div>
+            	
+            	<nav class="l-navigation">
+            	    <ul class="nav main-navigation">
+            	        {{#items}}
+            						    <li><a href="{{url}}">{{{title}}}</a></li>
+            							{{/items}}
+            	    </ul>
+            	</nav>
+            </div>
+		    
+		</div>
+	</header>

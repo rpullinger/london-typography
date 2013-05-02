@@ -19,13 +19,28 @@ Register a dynamic sidebar
  */
 function register_main_sidebar() {
 	register_sidebar(array(
-	    'before_widget' => '<div class="l-sidebar-widget"><div class="sidebar-widget">',
+		'name' => 'Main Post Sidebar',
+	    'before_widget' => '<div class="l-sidebar-widget"><div class="widget">',
 	    'after_widget' => '</div></div>',
-	    'before_title' => '<h2 class="title">',
+	    'before_title' => '<h2 class="widget-title">',
 	    'after_title' => '</h2>',
 	));
 }
 add_action( 'init', 'register_main_sidebar' );
+
+/*
+Register a dynamic sidebar
+ */
+function register_footer() {
+	register_sidebar(array(
+		'name' => 'Footer',
+	    'before_widget' => '<div class="l-footer-widget"><div class="widget">',
+	    'after_widget' => '</div></div>',
+	    'before_title' => '<h2 class="widget-title">',
+	    'after_title' => '</h2>',
+	));
+}
+add_action( 'init', 'register_footer' );
 
 
 /*

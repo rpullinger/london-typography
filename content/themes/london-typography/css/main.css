@@ -88,44 +88,44 @@ Full bleed - pull items to parent sides
 /*
 Navigation abstraction - http://csswizardry.com/2011/09/the-nav-abstraction/
  */
-.nav, .form-list ul, .main-navigation, .sub-nav {
+.nav, .form-list ul, .main-navigation, .widget ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
-.nav > li, .form-list ul > li, .main-navigation > li, .sub-nav > li,
+.nav > li, .form-list ul > li, .main-navigation > li, .widget ul > li,
 .nav > li > a,
 .form-list ul > li > a,
 .main-navigation > li > a,
-.sub-nav > li > a {
+.widget ul > li > a {
   display: inline-block;
   cursor: pointer;
   position: relative;
   *display: inline;
   zoom: 1;
 }
-.nav ul, .form-list ul ul, .main-navigation ul, .sub-nav ul {
+.nav ul, .form-list ul ul, .main-navigation ul, .widget ul ul {
   padding-left: 0;
   position: absolute;
   top: 100%;
   left: 0;
   display: none;
 }
-.nav > li:hover ul, .form-list ul > li:hover ul, .main-navigation > li:hover ul, .sub-nav > li:hover ul {
+.nav > li:hover ul, .form-list ul > li:hover ul, .main-navigation > li:hover ul, .widget ul > li:hover ul {
   display: block;
 }
 
 /*
 Stacked Navigation
  */
-.nav-stacked > li, .nav ul > li, .form-list ul ul > li, .main-navigation ul > li, .sub-nav ul > li, .form-list ul > li, .sub-nav > li,
+.nav-stacked > li, .nav ul > li, .form-list ul ul > li, .main-navigation ul > li, .widget ul ul > li, .form-list ul > li, .widget ul > li,
 .nav-stacked > li > a,
 .nav ul > li > a,
 .form-list ul ul > li > a,
 .main-navigation ul > li > a,
-.sub-nav ul > li > a,
+.widget ul ul > li > a,
 .form-list ul > li > a,
-.sub-nav > li > a {
+.widget ul > li > a {
   display: block;
 }
 
@@ -535,8 +535,8 @@ Border box everything! http://paulirish.com/2012/box-sizing-border-box-ftw/
 /*
 Shared vertical rhythm - csswizardry.com/2012/06/single-direction-margin-declarations
  */
-h1, h2, h3, h4, h5, .footer-title, .main-navigation a, .split .next a,
-.split .previous a, .photo-title, .photo-meta-title, h6, hgroup,
+h1, h2, h3, h4, h5, .main-navigation a, .split .next a,
+.split .previous a, .photo-title, .photo-meta-title, .widget-title, h6, hgroup,
 ul, ol, dl,
 blockquote, p, address,
 table,
@@ -545,9 +545,9 @@ pre {
   margin-top: 0;
   margin-bottom: 20px;
 }
-h1:last-child, h1.last, h2:last-child, h2.last, h3:last-child, h3.last, h4:last-child, h4.last, h5:last-child, .footer-title:last-child, .main-navigation a:last-child, .split .next a:last-child,
-.split .previous a:last-child, .photo-title:last-child, .photo-meta-title:last-child, h5.last, .last.footer-title, .main-navigation a.last, .split .next a.last,
-.split .previous a.last, .last.photo-title, .last.photo-meta-title, h6:last-child, h6.last, hgroup:last-child, hgroup.last,
+h1:last-child, h1.last, h2:last-child, h2.last, h3:last-child, h3.last, h4:last-child, h4.last, h5:last-child, .main-navigation a:last-child, .split .next a:last-child,
+.split .previous a:last-child, .photo-title:last-child, .photo-meta-title:last-child, .widget-title:last-child, h5.last, .main-navigation a.last, .split .next a.last,
+.split .previous a.last, .last.photo-title, .last.photo-meta-title, .last.widget-title, h6:last-child, h6.last, hgroup:last-child, hgroup.last,
 ul:last-child,
 ul.last, ol:last-child, ol.last, dl:last-child, dl.last,
 blockquote:last-child,
@@ -583,12 +583,12 @@ h2,
 h3,
 h4,
 h5,
-.footer-title,
 .main-navigation a,
 .split .next a,
 .split .previous a,
 .photo-title,
 .photo-meta-title,
+.widget-title,
 h6 {
   font-family: "Open Sans" "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
@@ -611,8 +611,8 @@ h4 {
   font-size: 14px;
 }
 
-h5, .footer-title, .main-navigation a, .split .next a,
-.split .previous a, .photo-title, .photo-meta-title {
+h5, .main-navigation a, .split .next a,
+.split .previous a, .photo-title, .photo-meta-title, .widget-title {
   font-size: 13px;
 }
 
@@ -671,7 +671,7 @@ Fixed width container
  */
 .l-container {
   padding: 20px;
-  max-width: 1150px;
+  max-width: 960px;
 }
 
 /*
@@ -708,7 +708,7 @@ body {
   vertical-align: middle;
 }
 .l-vertically-center-children > * {
-  max-width: 1150px;
+  max-width: 960px;
 }
 
 /**
@@ -768,9 +768,7 @@ body {
 .form-input,
 .form-heading > *,
 .form-submit-button, .split .next,
-.split .previous, .photo, .photo-meta-container, .photo-meta > li, .photo-nav, .site-footer-about,
-.site-footer-sublinks,
-.site-footer-contact {
+.split .previous, .photo, .photo-meta-container, .photo-meta > li, .photo-nav, .l-footer-widget {
   display: inline-block;
   *display: inline;
   padding-left: 20px;
@@ -782,9 +780,7 @@ body {
 .l-snug .form-heading > *,
 .l-snug .form-submit-button, .l-snug .split .next, .split .l-snug .next,
 .l-snug .split .previous,
-.split .l-snug .previous, .l-snug .photo, .l-snug .photo-meta-container, .l-snug .photo-meta > li, .l-snug .photo-nav, .l-snug .site-footer-about,
-.l-snug .site-footer-sublinks,
-.l-snug .site-footer-contact {
+.split .l-snug .previous, .l-snug .photo, .l-snug .photo-meta-container, .l-snug .photo-meta > li, .l-snug .photo-nav, .l-snug .l-footer-widget {
   padding-left: 0;
 }
 .debug .l-grid-item, .debug .form-label,
@@ -792,9 +788,7 @@ body {
 .debug .form-heading > *,
 .debug .form-submit-button, .debug .split .next, .split .debug .next,
 .debug .split .previous,
-.split .debug .previous, .debug .photo, .debug .photo-meta-container, .debug .photo-meta > li, .debug .photo-nav, .debug .site-footer-about,
-.debug .site-footer-sublinks,
-.debug .site-footer-contact {
+.split .debug .previous, .debug .photo, .debug .photo-meta-container, .debug .photo-meta > li, .debug .photo-nav, .debug .l-footer-widget {
   border: 1px solid red;
 }
 
@@ -824,9 +818,7 @@ Whole
 .form-input,
 .form-heading > *,
 .form-submit-button, .split .next,
-.split .previous, .photo, .photo-meta-container, .photo-meta > li, .photo-nav, .site-footer-about,
-.site-footer-sublinks,
-.site-footer-contact {
+.split .previous, .photo, .photo-meta-container, .photo-meta > li, .photo-nav, .l-footer-widget {
   width: 100%;
 }
 
@@ -1066,8 +1058,7 @@ Small breakpoint
   /*
   Half
    */
-  .l-small-one-half, .site-footer-sublinks,
-  .site-footer-contact {
+  .l-small-one-half, .l-footer-widget:first-child {
     width: 50%;
   }
 
@@ -1085,7 +1076,7 @@ Small breakpoint
   /*
   Quarters
    */
-  .l-small-one-quarter {
+  .l-small-one-quarter, .l-footer-widget {
     width: 25%;
   }
 
@@ -1295,7 +1286,7 @@ Medium
   /*
   Half
    */
-  .l-medium-one-half, .site-footer-about {
+  .l-medium-one-half {
     width: 50%;
   }
 
@@ -1313,8 +1304,7 @@ Medium
   /*
   Quarters
    */
-  .l-medium-one-quarter, .site-footer-sublinks,
-  .site-footer-contact {
+  .l-medium-one-quarter {
     width: 25%;
   }
 
@@ -2177,15 +2167,22 @@ h2,
 h3,
 h4,
 h5,
-.footer-title,
 .main-navigation a,
 .split .next a,
 .split .previous a,
 .photo-title,
 .photo-meta-title,
+.widget-title,
 h6 {
   margin-bottom: 5px;
   font-weight: normal;
+}
+
+.main-navigation a, .split .next a,
+.split .previous a, .photo-title, .photo-meta-title, .widget-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /*
@@ -2197,6 +2194,9 @@ Header
 .site-header {
   background: white;
 }
+.site-header .l-container {
+  padding-bottom: 0;
+}
 .site-header h1 {
   display: inline-block;
   text-transform: uppercase;
@@ -2204,12 +2204,34 @@ Header
   padding: 0.5em;
 }
 
+@media (min-width: 600px) {
+  .l-header-container {
+    display: table;
+    width: 100%;
+  }
+
+  .l-logo,
+  .l-navigation {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .l-navigation {
+    text-align: right;
+  }
+}
 .main-navigation {
   display: inline-block;
 }
 .main-navigation a {
   border: 0;
-  padding: 0.5em;
+  padding: 1em 1em 0 0;
+}
+@media (min-width: 600px) {
+  .main-navigation a {
+    padding-left: 1em;
+    padding-right: 0em;
+  }
 }
 
 /*
@@ -2263,15 +2285,13 @@ Footer
   color: #666666;
 }
 
-.footer-title, .main-navigation a, .split .next a,
-.split .previous a, .photo-title, .photo-meta-title {
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
+.l-footer-widget {
+  margin-bottom: 20px;
 }
 
-.sub-nav a {
+.widget ul a {
   color: inherit;
+  display: inline;
 }
 
 .map-box {

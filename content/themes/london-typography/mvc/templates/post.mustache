@@ -20,7 +20,11 @@
                         </li>
                         <li>
                             <h2 class="photo-meta-title"><i class="icon-tag"></i> Tags</h2>
-                            <p>graffiti, sign, bold</p>
+                            {{#has_tags}}
+						        {{#the_tags}}
+						        <a href="{{tag_link}}">{{name}}</a>
+						        {{/the_tags}}
+							{{/has_tags}}
                         </li>
                     </ul>
                </div>
@@ -36,14 +40,14 @@
 
                <div class="photo-nav">
                    <nav class="split">
-                       <p class="next"><a href="#">Next <i class="icon-arrow-right"></i></a></p>
-                       <p class="previous"><a href="#" ><i class="icon-arrow-left"></i> Previous</a></p>
+                       <p class="next">{{#next_post_link}}{{{next_post_link}}}{{/next_post_link}}</p>
+                       <p class="previous">{{#previous_post_link}}{{{previous_post_link}}}{{/previous_post_link}}</p>
                    </nav>
                </div>
             </div> 
 
-            {{#next_post_link}}{{{next_post_link}}}{{/next_post_link}}
-			{{#previous_post_link}}{{{previous_post_link}}}{{/previous_post_link}}
+            
+			
        
         </div>
         {{/post}}
